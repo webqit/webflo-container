@@ -50,7 +50,7 @@ Whether running locally or in the cloud, webflo can easily take your application
 Simply point docker at your container (using `docker exec [container-name]`) and execute the `webflo deploy` command.
 
 ```shell
-docker exec my-app webflo deploy https://github.com/my/app
+docker exec my-app webflo deploy https://github.com/me/my-app
 ```
 
 If you will need to install any npm dependencies, you would run `npm install` on the appropriate directory in your container.
