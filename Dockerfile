@@ -3,7 +3,7 @@ FROM node:12-alpine
 RUN apk --no-cache add git
 
 # NODE_ENV for installation
-ENV NODE_ENV production
+# ENV NODE_ENV production
 
 # We'll install npm packages at one-level higher'
 # actuall app root, so that we can bind-mount host system's app root
@@ -15,13 +15,12 @@ RUN npm install @webqit/oohtml-cli -g
 
 # Move one-level in, for the reasons above
 WORKDIR /home/www/app
-COPY . .
 
 # To auto-start app (flags optional), we would add...
 # CMD ["webflo", "start", "--dev", "--http-only"]
 
 # To build the image locally...
-# docker build -t webflo .
+# docker build --no-cache -t webflo .
 
 # To publish to docker hub...
 # docker login -u webqit
