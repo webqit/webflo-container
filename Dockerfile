@@ -3,7 +3,7 @@ FROM node:12-alpine
 RUN apk --no-cache add git
 
 # NODE_ENV for installation
-# ENV NODE_ENV production
+ENV NODE_ENV development
 
 # We'll install npm packages at one-level higher'
 # actuall app root, so that we can bind-mount host system's app root
